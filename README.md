@@ -9,8 +9,17 @@ Windows machines that experience such problems.
 
 Cheers!
 
-## Download
+## Instructions & Download
 
-[Download WindowsAudioRefresher.bat](https://raw.githubusercontent.com/net-beard/windows-audio-refresher/main/WindowsAudioRefresher.bat)
+- ⬇️ Download [WindowsAudioRefresher.bat](https://github.com/net-beard/windows-audio-refresher/releases/latest/download/WindowsAudioRefresher.bat)
+- 🛡️ Run as Administrator
 
 ## Screencaps
+
+| Stopping audio services | Clearing the audio stack |
+| --- | --- |
+| ![Stopping audio services](images/1.png) | ![Clearing the audio stack](images/2.png) |
+
+| Restarting the audio service | Refresh completed successfully |
+| --- | --- |
+| ![Restarting the audio service](images/3.png) | ![Refresh completed successfully](images/4.png) |
