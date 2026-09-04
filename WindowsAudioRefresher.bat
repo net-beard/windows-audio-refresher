@@ -10,7 +10,7 @@ reg add "HKCU\Console" /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set "ESC=%%b"
 
 ::Refresh window sizing guidelines to lock vector fonts in
-mode con: cols=100 lines=25
+mode con: cols=67 lines=15
 cls
 
 ::Admin Privileges Check
@@ -19,8 +19,8 @@ if %errorLevel% NEQ 0 (
     powershell -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
     exit /b
 )
-cls
 
+cls
 call :showBanner
 
 ::Audio Restart Sequence
@@ -79,11 +79,11 @@ exit /b
 
 :showBanner
 echo.
-echo  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-echo  ░█▀█░█░█░█▀▄░▀█▀░█▀█░░█▀▀░▀█▀░█░█░░█░█░▀█▀░▀█▀░█░░░▀█▀░▀█▀░█░█░
-echo  ░█▀█░█░█░█░█░░█░░█░█░░█▀▀░░█░░▄▀▄░░█░█░░█░░░█░░█░░░░█░░░█░░░▀█░
-echo  ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░░▀░░░▀▀▀░▀░▀░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░░▀░░░░▀░
-echo  [By Net-Beard]░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+echo  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+echo  ░█▀█░█░█░█▀▄░▀█▀░█▀█░░░█▀▀░▀█▀░█░█░░░█░█░▀█▀░▀█▀░█░░░▀█▀░▀█▀░█░█░
+echo  ░█▀█░█░█░█░█░░█░░█░█░░░█▀▀░░█░░▄▀▄░░░█░█░░█░░░█░░█░░░░█░░░█░░░▀█░
+echo  ░▀░▀░▀▀▀░▀▀░░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀░▀░░░▀▀▀░░▀░░▀▀▀░▀▀▀░▀▀▀░░▀░░░░▀░
+echo  [By Net-Beard]░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 echo.
 echo.
 exit /b
