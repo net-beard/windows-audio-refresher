@@ -3,10 +3,10 @@ title Audio Fix Utility - Restart Audio Services
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
-::Force enable ANSI Escape sequences in the current command prompt window
+::Force enable ANSI Escape sequences
 reg add "HKCU\Console" /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul
 
-::GENERATE THE INVISIBLE ESC CHARACTER NATIVELY (No PowerShell = Clear Fonts!)
+::Generate the invisible ESC character natively (No PowerShell = Clear Fonts!)
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set "ESC=%%b"
 
 ::Refresh window sizing guidelines to lock vector fonts in
