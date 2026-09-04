@@ -22,4 +22,4 @@ Cheers!
 
 | Restarting the audio service | Refresh completed successfully |
 | --- | --- |
-| ![Restarting the audio service](images/3.png) | ![Refresh completed successfully](images/4.png) |
+| ![Restarting the audio service](images/3.png) | ![Success](images/4.png) |
